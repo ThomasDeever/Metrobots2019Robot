@@ -61,7 +61,7 @@ public class DriveTrain extends Subsystem {
     /**
      * Reset both of encoders
      */
-    public static void clearEncoder() {
+    public void clearEncoder() {
         lEncoder.reset();
         rEncoder.reset();
     }
@@ -69,7 +69,16 @@ public class DriveTrain extends Subsystem {
     /**
      * Print the encoder values, left (L Encoder Distance) and right (R Encoder Distance)
      */
-    public void printEncoderDistance() {
+
+    public double getLeftEncoder(){
+        lEncoder.getDistance();
+    }
+
+    public double getRightEncoder(){
+       rEncoder.getDistance();
+    }
+
+    public printEncoderDistance() {
         rightDistance.setDouble(rEncoder.getDistance());
         leftDistance.setDouble(lEncoder.getDistance());
         rightRaw.setDouble(rEncoder.getRaw());
@@ -89,6 +98,10 @@ public class DriveTrain extends Subsystem {
      * Avoid usage at all costs
      */
     public void clearGyro() { gyro.reset(); }
+
+    public void getAngle() {
+        gyro.getYaw();
+    }
 
     public double getYaw() { return gyro.getYaw(); }
 
