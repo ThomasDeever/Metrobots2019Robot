@@ -42,12 +42,10 @@ public class Odometry extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-
         lEncoder = Robot.driveTrain.getLeftEncoder();
         rEncoder = Robot.driveTrain.getRightEncoder();
         middleEncoder = (lEncoder + rEncoder)/2;
-        phi = Robot.driveTrain
-                .getYaw();
+        phi = Robot.driveTrain.getYaw();
 
         xPrime = x + middleEncoder * Math.cos(theta);
         yPrime = y + middleEncoder * Math.sin(theta);

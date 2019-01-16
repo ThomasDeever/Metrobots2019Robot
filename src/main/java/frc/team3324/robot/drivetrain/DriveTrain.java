@@ -130,7 +130,6 @@ public class DriveTrain extends Subsystem {
         gyro.getYaw();
     }
 
-
     public void setBrakeMode() {
         frMotor.setNeutralMode(com.ctre.phoenix.motorcontrol.NeutralMode.Brake);
         brMotor.setNeutralMode(com.ctre.phoenix.motorcontrol.NeutralMode.Brake);
