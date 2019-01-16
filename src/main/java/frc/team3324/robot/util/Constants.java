@@ -28,7 +28,7 @@ public class Constants {
         private final static double CIRCUMFERENCE = 2 * Math.PI * WHEEL_DIAMETER_METERS; // (Meters)
         public final static int PULSES = 7680; // 256 (pulses) * 4 (quadature, 4 ticks/pulse) * 3 * 2.5 (gear ratios)
         public final static double DISTANCE_PER_PULSE = CIRCUMFERENCE / PULSES;
-        public final static double DISTANCE_BETWEEN_WHEELS = 0.5715;
+        public final static double DISTANCE_BETWEEN_WHEELS = 28.25;
         public final static double LOW_GEAR_MAX_VELOCITY = 2.4384;
     }
 

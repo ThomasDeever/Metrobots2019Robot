@@ -82,7 +82,7 @@ public class DriveTrain extends Subsystem {
     /**
      * Reset both of encoders
      */
-    public static void clearEncoder() {
+    public void clearEncoder() {
         lEncoder.reset();
         rEncoder.reset();
     }
@@ -90,6 +90,15 @@ public class DriveTrain extends Subsystem {
     /**
      * Print the encoder values, left (L Encoder Distance) and right (R Encoder Distance)
      */
+
+    public double getLeftEncoder(){
+        lEncoder.getDistance();
+    }
+
+    public double getRightEncoder(){
+       rEncoder.getDistance();
+    }
+
     public void printEncoderDistance() {
         rightDistance.setDouble(rEncoder.getDistance());
         leftDistance.setDouble(lEncoder.getDistance());
@@ -117,6 +126,10 @@ public class DriveTrain extends Subsystem {
     public double getYaw() {
         return gyro.getYaw();
     }
+    public void getAngle() {
+        gyro.getYaw();
+    }
+
 
     public void setBrakeMode() {
         frMotor.setNeutralMode(com.ctre.phoenix.motorcontrol.NeutralMode.Brake);
